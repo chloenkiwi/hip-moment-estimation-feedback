@@ -95,18 +95,3 @@ The model runs on the CPU. Changes to sensor order, input fields, network archit
 | `feedback_state_max` | Upper-threshold feedback state |
 | `min_threshold` | Active lower threshold |
 | `max_threshold` | Active upper threshold |
-
-## Repository layout
-
-```text
-.
-├── core.py               # SAGE app entry point and feedback control
-├── gait_phase.py         # Online gait-phase state machine
-├── hip_moments.py        # CNN architecture and streaming inference
-├── const.py              # Shared constants and sensor fields
-├── config.json           # Anonymous example configuration
-├── info.json             # SAGE metadata, inputs, and outputs
-├── models/               # Pretrained weights and fitted scalers
-├── requirements.txt
-└── LICENSE
-```
