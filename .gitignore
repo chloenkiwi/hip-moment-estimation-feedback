@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Local runtime state and recorded participant data
+snapshot.json
+*.csv
+*.h5
+*.hdf5
+*.xlsx
+logs/
+data/
+outputs/

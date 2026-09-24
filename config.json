@@ -1,0 +1,16 @@
+{
+  "feedback_enabled": true,
+  "feedback_phase_target": "end_stance",
+  "feedback_target_moment": "HAM",
+  "test_side": "right",
+  "height": 1.75,
+  "last_connect_feedback": [],
+  "last_connect_sensors": [],
+  "local_time": "",
+  "max_min_window": "max",
+  "max_threshold": 2,
+  "min_threshold": -2,
+  "save_mode": "csv",
+  "trial_name": "trial_0",
+  "weight": 70
+}

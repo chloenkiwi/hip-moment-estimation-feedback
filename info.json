@@ -1,0 +1,172 @@
+{
+  "user_guide_file": "",
+  "app_name": "HFM HAM",
+  "app_version": "0_8",
+  "app_id": "074",
+  "version_id": "07408",
+  "app_description": "Real-time estimation and feedback of hip flexion moment (HFM) and hip adduction moment (HAM) from four wearable IMUs during walking.",
+  "parameters_setting": [
+    [
+      "Feedback Setting",
+      {
+        "source": "feedback_enabled",
+        "title": "Feedback On?",
+        "type": "bool",
+        "description": "Enable/Disable feedback"
+      },
+      {
+        "source": "feedback_target_moment",
+        "title": "Which Moment?",
+        "type": "combo",
+        "validation": [
+          "HAM",
+          "HFM"
+        ],
+        "description": "Which moment do you want to give feedback on?"
+      },
+      {
+        "source": "test_side",
+        "title": "Test Right or Left",
+        "type": "combo",
+        "validation": [
+          "right",
+          "left"
+        ],
+        "description": "To get right or left hip moment"
+      },
+      {
+        "source": "min_threshold",
+        "title": "Min Threshold Moment",
+        "type": "float",
+        "description": "Minimum threshold moment"
+      },
+      {
+        "source": "max_threshold",
+        "title": "Max Threshold Moment",
+        "type": "float",
+        "description": "Maximum threshold moment"
+      },
+      {
+        "source": "feedback_phase_target",
+        "title": "Feedback Phase Target",
+        "type": "combo",
+        "validation": [
+          "none",
+          "end_stance"
+        ],
+        "description": "When do you want to give feedback? If you pick None, it will give feedback imediately after the moment is reached."
+      },
+      {
+        "source": "max_min_window",
+        "title": "Max or Min During Stance",
+        "type": "combo",
+        "validation": [
+          "max",
+          "min"
+        ],
+        "description": "Look for max or min during stance phase"
+      }
+    ],
+    [
+      "Save Options",
+      {
+        "source": "save_mode",
+        "title": "Save Mode",
+        "type": "combo",
+        "validation": [
+          "csv",
+          "h5",
+          "xlsx"
+        ],
+        "description": "Save file in specified format"
+      }
+    ],
+    [
+      "User Info",
+      {
+        "source": "weight",
+        "title": "Subject Weight (Kg)",
+        "type": "float",
+        "validation": [
+          0,
+          200
+        ],
+        "description": "Subject Weight (Kg)"
+      },
+      {
+        "source": "height",
+        "title": "Subject Height (m)",
+        "type": "float",
+        "validation": [
+          0,
+          2.5
+        ],
+        "description": "Subject Height (m)"
+      }
+    ]
+  ],
+  "user_fields": [
+    {
+      "name": "time",
+      "data_type": "float",
+      "size": 1
+    },
+    {
+      "name": "HAM",
+      "data_type": "float",
+      "size": 1
+    },
+    {
+      "name": "HFM",
+      "data_type": "float",
+      "size": 1
+    },
+    {
+      "name": "Stance_Flag",
+      "data_type": "int",
+      "size": 1
+    },
+    {
+      "name": "gait_transition",
+      "data_type": "int",
+      "size": 1
+    },
+    {
+      "name": "gait_transition_name",
+      "data_type": "str",
+      "size": 1
+    },
+    {
+      "name": "feedback_state_min",
+      "data_type": "int",
+      "size": 1
+    },
+    {
+      "name": "feedback_state_max",
+      "data_type": "int",
+      "size": 1
+    },
+    {
+      "name": "min_threshold",
+      "data_type": "float",
+      "size": 1
+    },
+    {
+      "name": "max_threshold",
+      "data_type": "float",
+      "size": 1
+    }
+  ],
+  "sensors": [
+    "FOOT",
+    "THIGH",
+    "PELVIS",
+    "CHEST"
+  ],
+  "feedback": [
+    "feedback_min",
+    "feedback_max"
+  ],
+  "pulse_length": 0.1,
+  "datarate": 100
+}
